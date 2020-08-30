@@ -1,3 +1,3 @@
 #! /bin/python3
 
-print("test")
+print("test-pipe")
