@@ -8,7 +8,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'python3 tests.py'
+        sh '. ./env/bin/activate && python3 tests.py'
       }   
     }
   }
