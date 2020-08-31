@@ -9,7 +9,12 @@ pipeline {
     stage('test') {
       steps {
         sh '. ./env/bin/activate && python3 tests.py'
-      }   
+      }
+      post {
+        always {
+          junit 'test-reports/*.xml'
+        }
+      }
     }
   }
 }
